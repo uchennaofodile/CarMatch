@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CarMatchApplication<CarMatch>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.uchennaofodile.CarMatch.CarMatchApplication",
+            "projectName": "CarMatch",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
