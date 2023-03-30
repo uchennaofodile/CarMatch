@@ -1,3 +1,4 @@
+const popUp = document.getElementById("pop-up-form");
 
 //Adding show password
 function showPassword() {
@@ -10,20 +11,25 @@ function showPassword() {
 }
 
 function openForm() {
-    document.getElementById("pop-up-form").style.display = "block";
+    popUp.style.display = "block";
 }
 function closeForm() {
-    document.getElementById("pop-up-form").style.display = "none";
+	//console.log("Closing form...");
+    popUp.style.display = "none";
 }
-
-//capture the form
-const popUpForm = document.getElementById("pop-up-form")
-
-
-// When the user clicks anywhere outside of the form, close it
-window.onclick = function (event) {
-    //const modal = document.getElementById('pop-up-form');
-    if (event.target = popUpForm) {
+// When the user clicks anywhere outside of the modal, close it
+/*window.onclick = function (event) {
+    const modal = document.getElementById('pop-up-form');
+      //closeForm();
+      //console.log(event.target);
+    //console.log(modal);
+    if (event.target !== modal) {
         closeForm();
     }
-}
+}*/
+
+/*window.addEventListener('click', (event) => {
+    if (event.target !== popUp && !popUp.contains(event.target)) {
+        closeForm();
+    }
+});*/
