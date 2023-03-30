@@ -15,10 +15,15 @@ function openForm() {
 function closeForm() {
     document.getElementById("pop-up-form").style.display = "none";
 }
-// When the user clicks anywhere outside of the modal, close it
+
+//capture the form
+const popUpForm = document.getElementById("pop-up-form")
+
+
+// When the user clicks anywhere outside of the form, close it
 window.onclick = function (event) {
-    const modal = document.getElementById('pop-up-form');
-    if (event.target = modal) {
+    //const modal = document.getElementById('pop-up-form');
+    if (event.target = popUpForm) {
         closeForm();
     }
 }

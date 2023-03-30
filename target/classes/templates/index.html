@@ -1,106 +1,105 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
+<head>
 
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
-        <!-- Latest compiled JavaScript -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- <script th:src="@{/js/myscript.js}"></script> -->
-        <title>CarFinder | Find Your Dream Car</title>
-        <style>
-            #page-width {
-                width: 1270px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+<meta charset="UTF-8" name="viewport"
+	content="width=device-width, initial-scale=1.0">
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script th:src="@{/js/myscript.js}"></script> -->
+<title>CarFinder | Find Your Dream Car</title>
+<style>
+#page-width {
+	width: 1270px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
-            .page-width {
-                width: 1270px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+.page-width {
+	width: 1270px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
+#pop-up-form {
+	display: none;
+}
+</style>
+</head>
 
-            #pop-up-form {
-                display: none;
-            }
-        </style>
-    </head>
-
-    <body id="page-width">
-        <div>
-            <div style="width: 1270px;margin-left: auto;
-            margin-right: auto; background-color: black;">
-                <nav class="pt-3 navbar navbar-expand-lg navbar-dark bg-dark border border-0 fixed-top">
-                    <div id="page-width" class=" container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <h2>CarFinder</h2>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarColor02">
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Home
-                                        <span class="visually-hidden">(current)</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Pricing</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Separated link</a>
-                                    </div>
-
-                                </li>
-                            </ul>
-                            <div class="d-flex align-items-center">
-                                <button class="btn btn-secondary text-white btn-outline-light me-2" type="button"
-                                    style="background-color: rgba(143, 143, 143, 0.126) ;" id="index-login"
-                                    onclick="openForm()">Login</button>
-                                <button class="btn btn-primary" type="button" id="index-sign-up"
-                                    onclick="openForm()">Sign up</button>
-                            </div>
-                            <!-- <form class="d-flex">
+<body id="page-width">
+	<div>
+		<div
+			style="width: 1270px; margin-left: auto; margin-right: auto; background-color: black;">
+			<nav
+				class="pt-3 navbar navbar-expand-lg navbar-dark bg-dark border border-0 fixed-top">
+				<div id="page-width" class=" container-fluid">
+					<a class="navbar-brand" href="#">
+						<h2>CarFinder</h2>
+					</a>
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+						aria-controls="navbarColor02" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarColor02">
+						<ul class="navbar-nav me-auto">
+							<li class="nav-item"><a class="nav-link active" href="#">Home
+									<span class="visually-hidden">(current)</span>
+							</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Features</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="#">Pricing</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="#">About</a>
+							</li>
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+								href="#" role="button" aria-haspopup="true"
+								aria-expanded="false">Dropdown</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Action</a> <a
+										class="dropdown-item" href="#">Another action</a> <a
+										class="dropdown-item" href="#">Something else here</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Separated link</a>
+								</div></li>
+						</ul>
+						<div class="d-flex align-items-center">
+							<button
+								class="btn btn-secondary text-white btn-outline-light me-2"
+								type="button"
+								style="background-color: rgba(143, 143, 143, 0.126);"
+								id="index-login" onclick="openForm()">Login</button>
+							<button class="btn btn-primary" type="button" id="index-sign-up"
+								onclick="openForm()">Sign up</button>
+						</div>
+						<!-- <form class="d-flex">
                         <input class="form-control me-sm-2" type="search" placeholder="Search">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                     </form> -->
-                        </div>
-                    </div>
-                    <!-- <span style="width: 100px; display: inline ;" class="float-end"><a href="#">Sign up</a> | <a
+					</div>
+				</div>
+				<!-- <span style="width: 100px; display: inline ;" class="float-end"><a href="#">Sign up</a> | <a
                             href="#">Login</a></span> -->
-            </div>
-            </nav>
+		</div>
+		</nav>
 
-        </div>
-        <!--The nav bar ends here-->
+	</div>
+	<!--The nav bar ends here-->
 
 
 
-        <!-- <div style="height: 200px;">
+	<!-- <div style="height: 200px;">
                 <div class="h-auto">
                     <img th:src="@{/images/alessio-lin-AxlHH0jX6Gs-unsplash.jpg}">
                 </div>
             </div> -->
-        <!-- <div class="h-100">
+	<!-- <div class="h-100">
                 <div class="position-relative w-100" style="height: 100vh;">
                     <img th:src="@{/images/alessio-lin-AxlHH0jX6Gs-unsplash.jpg}"
                         class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 end-0 bottom-0"
@@ -111,177 +110,194 @@
                     </div>
                 </div>
             </div> -->
-        <div class="h-100">
-            <div style="height:50px; background-color: rgba(143, 143, 143, 0.126) ;" class=" top-50 start-50">
-                <div class="position-absolute top-0 start-50 translate-middle">
-                    <p class=" pt-2 text-center text-white">We make it easy to find your dream car | <a href="#">Learn
-                            More</a>
-                    </p>
-                </div>
+	<div class="h-100">
+		<div
+			style="height: 50px; background-color: rgba(143, 143, 143, 0.126);"
+			class=" top-50 start-50">
+			<div class="position-absolute top-0 start-50 translate-middle">
+				<p class=" pt-2 text-center text-white">
+					We make it easy to find your dream car | <a href="#">Learn More</a>
+				</p>
+			</div>
 
 
-            </div>
-            <form id="pop-up-form">
-                <fieldset>
-                    <div class="form-group">
-                        <br>
-                        <br>
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="user-input" placeholder="Password"
-                            autocomplete="off">
-                        <input type="checkbox" onclick="showPassword()">Show Password
+		</div>
+		<form id="pop-up-form">
+			<fieldset>
+				<div class="form-group">
+					<br> <br> <label for="exampleInputEmail1">Email
+						address</label> <input type="email" class="form-control"
+						id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Enter email"> <small id="emailHelp"
+						class="form-text text-muted">We'll never share your email
+						with anyone else.</small>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label> <input
+						type="password" class="form-control" id="user-input"
+						placeholder="Password" autocomplete="off"> <input
+						type="checkbox" onclick="showPassword()">Show Password
 
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </fieldset>
-            </form>
-            <br>
-            <div class="position-relative w-100" style="height: 100vh;">
-                <img th:src="@{/images/alessio-lin-AxlHH0jX6Gs-unsplash.jpg}"
-                    class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 end-0 bottom-0" alt="">
-                <div class="d-flex align-items-start top-0 start-0 end-0 bottom-0 position-relative">
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</fieldset>
+		</form>
+		<br>
+		<div class="position-relative w-100" style="height: 100vh;">
+			<img th:src="@{/images/alessio-lin-AxlHH0jX6Gs-unsplash.jpg}"
+				class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 end-0 bottom-0"
+				alt="">
+			<div
+				class="d-flex align-items-start top-0 start-0 end-0 bottom-0 position-relative">
 
-                </div>
-                <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 end-0 bottom-0"
-                    style="background-color: rgba(101, 101, 101, 0.7);">
-                    <h1 class="text-center text-white">
-                        <div id="page-width">
-                            <pre>                 Car buying                       
+			</div>
+			<div
+				class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 end-0 bottom-0"
+				style="background-color: rgba(101, 101, 101, 0.7);">
+				<h1 class="text-center text-white">
+					<div class="page-width">
+						<pre>                 Car buying                       
                    shaped to your life</pre>
 
 
-                        </div>
-                    </h1>
-                </div>
-            </div>
-        </div>
-        <section style="width: 1270px;
-        margin-left: auto;
-        margin-right: auto;" class="container">
+					</div>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<section style="width: 1270px; margin-left: auto; margin-right: auto;"
+		class="container">
 
 
-            <div class="row container-fluid text-center">
-                <div class="jumbotron pt-5">
-                    <h4>Why CarFinder?</h4>
-                    <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
+		<div class="row container-fluid text-center">
+			<div class="jumbotron pt-5">
+				<h4 class="mb-4">Why CarFinder?</h4>
+				<!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
                             attention to featured content or information.</p> -->
-                    <!-- <hr class="my-4"> -->
-                    <!-- <p>It uses utility classes for typography and spacing to space content out within the larger
+				<!-- <hr class="my-4"> -->
+				<!-- <p>It uses utility classes for typography and spacing to space content out within the larger
                             container.</p> -->
-                </div>
+			</div>
 
-                <div class="col">
-                    <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">Find your fit</div>
-                        <div class="card-body">
-                            <h4 class="card-title">Find your fit</h4>
-                            <p class="card-text">Choose your make, model and options you want</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">Minutes, not hours</div>
-                        <div class="card-body">
-                            <h4 class="card-title">Minutes, not hours</h4>
-                            <p class="card-text">Tell us what you want for and we'll do the rest.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">Save your faves</div>
-                        <div class="card-body">
-                            <h4 class="card-title">Shop your way</h4>
-                            <p class="card-text">Save the cars you like and
-                                view them later.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<div class="col">
+				<div class="card text-white bg-dark mb-5">
+					<div class="card-header">
+						<h5 class="card-title">Find your fit</h5>
+					</div>
+					<div class="card-body">
 
+						<p class="card-text">Choose your make, model and options you
+							want</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card text-white bg-dark mb-3">
+					<div class="card-header">
+						<h5 class="card-title">Minutes, not hours</h5>
+					</div>
+					<div class="card-body">
 
+						<p class="card-text">Tell us what you want and we'll do the
+							rest.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card text-white bg-dark mb-3">
+					<div class="card-header">
+						<h5 class="card-title">Save your faves</h5>
+					</div>
+					<div class="card-body">
 
-            <p class="lead">
-            <div class="mx-auto text-center mt-5" style="width: 200px;"> <a class="btn btn-primary btn-lg" href="#"
-                    role="button">Learn more</a></div>
-
-            </p>
-            <div class="mx-auto text-center " style="width: 500px;">
-                <div class="card bg-transparent border border-0 mb-3">
-                    <h5 class="card-header  text-white  mt-5">Shop your favorite brand</h5>
-                    <img th:src="@{/images/car_logos.png}" class="top-0 start-0 end-0 bottom-0 mt-5 mb-5"
-                        alt="car logos">
-
-                </div>
+						<p class="card-text">Save the cars you like and view them
+							later.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 
-            </div>
-            <!--Remove nav below-->
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" data-bs-toggle="tab" href="#home" aria-selected="true"
-                        role="tab">Home</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" data-bs-toggle="tab" href="#profile" aria-selected="false" role="tab"
-                        tabindex="-1">Profile</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link disabled" href="#" aria-selected="false" tabindex="-1" role="tab">Disabled</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
-            </ul>
-            <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade active show" id="home" role="tabpanel">
-                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
-                        aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
-                        helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu
-                        banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
-                        Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-                </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel">
-                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-                        Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson
-                        artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo
-                        enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud
-                        organic, assumenda labore aesthetic magna delectus mollit.</p>
-                </div>
-                <div class="tab-pane fade" id="dropdown1">
-                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's
-                        organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify
-                        pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy
-                        hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred
-                        pitchfork.</p>
-                </div>
-                <div class="tab-pane fade" id="dropdown2">
-                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold
-                        out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack
-                        portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred
-                        vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral
-                        locavore cosby sweater.</p>
-                </div>
-            </div>
-            <!-- <div class="accordion" id="accordionExample">
+		<p class="lead">
+		<div class="mx-auto text-center mt-5" style="width: 200px;">
+			<a class="btn btn-primary btn-lg" href="#" role="button">Learn
+				more</a>
+		</div>
+
+		</p>
+		<div class="mx-auto text-center " style="width: 500px;">
+			<div class="card bg-transparent border border-0 mb-3">
+				<h5 class="card-header  text-white  mt-5">Shop your favorite
+					brand</h5>
+				<img th:src="@{/images/car_logos.png}"
+					class="top-0 start-0 end-0 bottom-0 mt-5 mb-5" alt="car logos">
+
+			</div>
+
+
+
+		</div>
+		<!--Remove nav below-->
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="nav-item" role="presentation"><a
+				class="nav-link active" data-bs-toggle="tab" href="#home"
+				aria-selected="true" role="tab">Home</a></li>
+			<li class="nav-item" role="presentation"><a class="nav-link"
+				data-bs-toggle="tab" href="#profile" aria-selected="false"
+				role="tab" tabindex="-1">Profile</a></li>
+			<li class="nav-item" role="presentation"><a
+				class="nav-link disabled" href="#" aria-selected="false"
+				tabindex="-1" role="tab">Disabled</a></li>
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+				role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Action</a> <a
+						class="dropdown-item" href="#">Another action</a> <a
+						class="dropdown-item" href="#">Something else here</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Separated link</a>
+				</div></li>
+		</ul>
+		<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade active show" id="home" role="tabpanel">
+				<p>Raw denim you probably haven't heard of them jean shorts
+					Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+					Mustache cliche tempor, williamsburg carles vegan helvetica.
+					Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby
+					sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
+					placeat salvia cillum iphone. Seitan aliquip quis cardigan american
+					apparel, butcher voluptate nisi qui.</p>
+			</div>
+			<div class="tab-pane fade" id="profile" role="tabpanel">
+				<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla
+					single-origin coffee squid. Exercitation +1 labore velit, blog
+					sartorial PBR leggings next level wes anderson artisan four loko
+					farm-to-table craft beer twee. Qui photo booth letterpress, commodo
+					enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
+					PBR. Homo nostrud organic, assumenda labore aesthetic magna
+					delectus mollit.</p>
+			</div>
+			<div class="tab-pane fade" id="dropdown1">
+				<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they
+					sold out mcsweeney's organic lomo retro fanny pack lo-fi
+					farm-to-table readymade. Messenger bag gentrify pitchfork tattooed
+					craft beer, iphone skateboard locavore carles etsy salvia banksy
+					hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify
+					squid 8-bit cred pitchfork.</p>
+			</div>
+			<div class="tab-pane fade" id="dropdown2">
+				<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+					art party before they sold out master cleanse gluten-free squid
+					scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+					art party locavore wolf cliche high life echo park Austin. Cred
+					vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+					farm-to-table VHS viral locavore cosby sweater.</p>
+			</div>
+		</div>
+		<!-- <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -301,7 +317,7 @@
                                 </div>
                             </div>
                         </div> -->
-            <!-- <div class="accordion-item">
+		<!-- <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -343,9 +359,9 @@
 
 
 
-        </section>
-        <!--Jumbotron ends here-->
-        <!-- end of page <div>
+	</section>
+	<!--Jumbotron ends here-->
+	<!-- end of page <div>
                 <h2 class="pt-2">Find your favorite brand</h2>
                 <img th:src="@{/images/car_logos.png}" class="top-0 start-0 end-0 bottom-0" alt="">
                 <div
@@ -363,11 +379,10 @@
 
         </div>-->
 
-        <div class=" text-center card-footer text-muted container">
-            CarFinder &copy;
-        </div>
+	<div class=" text-center card-footer text-muted container">
+		CarFinder &copy;</div>
 
-    </body>
-    <script th:src="@{/js/myscript.js}"></script>
+</body>
+<script th:src="@{/js/myscript.js}"></script>
 
 </html>

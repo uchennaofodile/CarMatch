@@ -11,6 +11,7 @@ import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -44,17 +45,23 @@ public class Car implements Serializable {
 	@Column(name = "max_price")
 	int maxPrice;
 	@Column
-	List<?> color;
+	@ElementCollection
+	List<String> color;
 	@Column(name="popular_features")
-	String popularFeatures;
+	@ElementCollection
+	List<String> popularFeatures;
 	@Column
-	List<?> transmission;
+	@ElementCollection
+	List<String> transmission;
 	@Column(name="drive_type")
-	List<?> driveType;
+	@ElementCollection
+	List<String> driveType;
 	@Column
-	List<?> engine;
+	@ElementCollection
+	List<String> engine;
 	@Column(name="interior_color")
-	List<?> interiorColor;
+	@ElementCollection
+	List<String> interiorColor;
 	
 	
 	@OneToMany(mappedBy= "car", cascade =CascadeType.ALL, orphanRemoval = true)
