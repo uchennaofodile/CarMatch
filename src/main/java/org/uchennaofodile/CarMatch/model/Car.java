@@ -22,7 +22,7 @@ import lombok.AccessLevel;
 
 //TrueCar Model
 @Entity
-@Table(name="car")
+@Table(name = "car")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -36,6 +36,9 @@ public class Car implements Serializable {
 	String make;
 	@Column
 	String model;
+	@Column(nullable = false)
+	@ElementCollection
+	List<String> newOrUsed;
 	@Column(name = "min_year")
 	int minYear;
 	@Column(name = "max_year")
@@ -47,25 +50,23 @@ public class Car implements Serializable {
 	@Column
 	@ElementCollection
 	List<String> color;
-	@Column(name="popular_features")
+	@Column(name = "popular_features")
 	@ElementCollection
 	List<String> popularFeatures;
 	@Column
 	@ElementCollection
 	List<String> transmission;
-	@Column(name="drive_type")
+	@Column(name = "drive_type")
 	@ElementCollection
 	List<String> driveType;
 	@Column
 	@ElementCollection
 	List<String> engine;
-	@Column(name="interior_color")
+	@Column(name = "interior_color")
 	@ElementCollection
 	List<String> interiorColor;
-	
-	
-	@OneToMany(mappedBy= "car", cascade =CascadeType.ALL, orphanRemoval = true)
+
+	@OneToMany(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true)
 	List<SearchResult> searchResults = new ArrayList<>();
-	
 
 }
