@@ -10,6 +10,38 @@
         <!-- <script th:src="@{/js/myscript.js}"></script> -->
         <title>CarFinder | Find Your Dream Car</title>
         <style>
+            body {
+                font-family: Radikal, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, Roboto, sans-serif;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.375;
+                color: #343434;
+            }
+
+            :root {
+                --btn-primary-background-color: var(--black);
+                --btn-primary-background-color-hover: var(--gray-900);
+                --btn-primary-background-color-active: #484848;
+                --btn-primary-dark-color: var(--black);
+                --btn-primary-dark-background-color-hover: var(--gray-50);
+                --btn-primary-dark-background-color-active: var(--gray-100);
+                --btn-primary-dark-background-color-disabled: var(--gray-700);
+                --btn-secondary-color-active: #484848;
+                --btn-secondary-background-color-active: var(--white);
+                --btn-secondary-border: 2px solid var(--gray-900);
+                --btn-secondary-border-hover: 2px solid var(--gray-900);
+                --btn-secondary-box-shadow-hover: inset 0 0 0 1px var(--gray-900);
+                --btn-secondary-border-active: 2px solid #484848;
+                --btn-secondary-dark-background-color: var(--black);
+                --btn-secondary-dark-color: var(--white);
+                --btn-secondary-dark-border-hover: 2px solid var(--gray-50);
+                --btn-secondary-dark-border-active: 2px solid var(--gray-100);
+                --btn-secondary-box-shadow-dark-hover: inset 0 0 0 1px var(--gray-50);
+                --btn-secondary-dark-border-disabled: 2px solid var(--gray-900);
+                --btn-secondary-dark-background-color-disabled: var(--gray-700);
+                --nav-pills-active-background-color: var(--black);
+            }
+
             #page-width {
                 width: 1270px;
                 margin-left: auto;
@@ -37,18 +69,19 @@
             }
 
             #section-body {
-                color: rgb(52, 52, 69)
+                color: #343434;
             }
 
-            #section-body h1 {
-                color: rgb(52, 52, 69)
-                    /* or any other color you prefer */
+            #section-body h1,
+            h5 {
+                color: #343434;
+                /* or any other color you prefer */
             }
         </style>
     </head>
 
     <body style="background-color: white;">
-        <div id="page-width">
+        <div id="page-width" class="container">
             <!--Don't touch, belongs to nav-->
             <nav class="pt-3 navbar navbar-expand-lg navbar-dark bg-dark border border-0 fixed-top">
                 <div id="page-width" class=" container-fluid">
@@ -82,12 +115,18 @@
                                 </div>
                             </li>
                         </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-sm-2" type="search" placeholder="Search">
+                            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                        </form>
                         <div class="d-flex align-items-center">
-                            <button class="btn btn-secondary text-white btn-outline-light me-2" type="button"
+                            <!-- <button class="btn btn-secondary text-white btn-outline-light me-2" type="button"
                                 style="background-color: rgba(143, 143, 143, 0.126);" id="index-login"
-                                onclick="openForm()">Login</button>
-                            <button class="btn btn-primary" type="button" id="index-sign-up" onclick="openForm()">Sign
-                                up</button>
+                                onclick="openForm()">Login</button> -->
+                            <button class="btn text-white d-flex justify-content-center text-center" type="button"
+                                id="index-sign-up" onclick="openForm()"><span class="m-1">Sign
+                                    up</span> <img th:src="@{/images/profile.png}"
+                                    style="max-width:100%; width: 24px; height: 24px" class="m-1"></button>
                         </div>
 
                     </div>
@@ -99,26 +138,56 @@
             <!--This is the footer-->
 
         </div>
-        <section id="section-body" class="page-width">
-            <main>
-                <div>
-                    <ol style="margin-top: 120px" class=" breadcrumb bg-transparent">
-                        <li class="breadcrumb-item"><a>Home</a></li>
-                        <li class="breadcrumb-item">Library</li>
-                    </ol>
-                    <div class="container d-flex justify-content-between">
-                        <div>
-                            <h1>Cars for Sale</h1>
-                        </div>
-                        <div> <button>Save Search</button></div>
-                    </div>
-                    <!-- <footer style="margin-top: 87px; background-color: white;" class=" text-center text-muted
+
+        <main id="section-body" class="page-width" style="color: #343434;">
+            <div>
+                <ol style="margin-top: 120px" class=" breadcrumb bg-transparent">
+                    <li class="breadcrumb-item"><a>Home</a></li>
+                    <li class="breadcrumb-item">Library</li>
+                </ol>
+                <div class="container d-flex justify-content-between">
+
+                    <h1>Cars for Sale</h1>
+
+                    <span><button type="button" class="btn btn-outline-secondary text-light btn-lg">Save
+                            Search</button></span>
+
+                </div>
+                <!-- <footer style="margin-top: 87px; background-color: white;" class=" text-center text-muted
         pt-3 container">
             CarFinder &copy;</footer> -->
-                </div>
-            </main>
-        </section>
 
+                <div class="row">
+                    <aside class="col m-3">
+                        User choices
+                        <form action="/action_page.php" class="border rounded">
+                            <label for="cars">Make</label>
+                            <select name="cars" id="cars">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <br>
+                            <label for="cars">Model</label>
+                            <select name="cars" id="cars">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <br><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </aside>
+                    <section class="col">
+                        <div class="mt-1 p-2 rounded container" style="background-color: #f5f5f5;">
+                            <h5>Your car buying experience simplified</h5>
+                        </div>Car Section
+                    </section>
+                </div>
+            </div>
+        </main>
     </body>
     <script th:src="@{/js/myscript.js}"></script>
 
