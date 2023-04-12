@@ -169,17 +169,59 @@
                                 <div class="mx-3 mb-2 mt-3">
                                     <div class="d-flex justify-content-between mb-3">
                                         <label for="cars">Make</label>
-                                        <select name="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
+                                        <select name="cars" class="text-end">
+                                            <!-- <option disabled selected value>Select a car
+                                                make</option> -->
+                                            <option value="">All</option>
+                                            <option value="acura">Acura</option>
+                                            <option value="alfa romeo">Alfa Romeo</option>
+                                            <option value="aston martin">Aston Martin</option>
                                             <option value="audi">Audi</option>
+                                            <option value="bentley">Bentley</option>
+                                            <option value="bmw">BMW</option>
+                                            <option value="buick">Buick</option>
+                                            <option value="cadillac">Cadillac</option>
+                                            <option value="chevrolet">Chevrolet</option>
+                                            <option value="chrysler">Chrysler</option>
+                                            <option value="dodge">Dodge</option>
+                                            <option value="ferrari">Ferrari</option>
+                                            <option value="fiat">Fiat</option>
+                                            <option value="ford">Ford</option>
+                                            <option value="gmc">GMC</option>
+                                            <option value="honda">Honda</option>
+                                            <option value="hyundai">Hyundai</option>
+                                            <option value="infiniti">Infiniti</option>
+                                            <option value="jaguar">Jaguar</option>
+                                            <option value="jeep">Jeep</option>
+                                            <option value="kia">Kia</option>
+                                            <option value="lamborghini">Lamborghini</option>
+                                            <option value="land rover">Land Rover</option>
+                                            <option value="lexus">Lexus</option>
+                                            <option value="lincoln">Lincoln</option>
+                                            <option value="lotus">Lotus</option>
+                                            <option value="maserati">Maserati</option>
+                                            <option value="mazda">Mazda</option>
+                                            <option value="mclaren">McLaren</option>
+                                            <option value="mercedes-benz">Mercedes-Benz</option>
+                                            <option value="mini">MINI</option>
+                                            <option value="mitsubishi">Mitsubishi</option>
+                                            <option value="nissan">Nissan</option>
+                                            <option value="porsche">Porsche</option>
+                                            <option value="ram">RAM</option>
+                                            <option value="rolls-royce">Rolls-Royce</option>
+                                            <option value="scion">Scion</option>
+                                            <option value="smart">Smart</option>
+                                            <option value="subaru">Subaru</option>
+                                            <option value="tesla">Tesla</option>
+                                            <option value="toyota">Toyota</option>
+                                            <option value="volkswagen">Volkswagen</option>
+                                            <option value="volvo">Volvo</option>
                                         </select>
                                     </div>
 
                                     <div class="d-flex justify-content-between  mb-3">
                                         <label for="cars">Model</label>
-                                        <select name="cars">
+                                        <select name="cars" class="text-end">
                                             <option value="volvo">Volvo</option>
                                             <option value="saab">Saab</option>
                                             <option value="opel">Opel</option>
@@ -189,7 +231,7 @@
 
                                     <div class="d-flex justify-content-between mb-3">
                                         <label for="cars">Body Style</label>
-                                        <select name="cars">
+                                        <select name="cars" class="text-end">
                                             <option value="volvo">Volvo</option>
                                             <option value="saab">Saab</option>
                                             <option value="opel">Opel</option>
@@ -200,16 +242,76 @@
                                     <div class="d-flex justify-content-between">
                                         <label for="cars">Year</label>
                                         <div class="d-flex flex-row-reverse">
-                                            <select class="ms-2" name="cars">
-                                                <option value="volvo">Max</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option value="audi">Audi</option>
-                                            </select> to <select class="me-2" name="cars">
-                                                <option value="volvo">Min</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option value="audi">Audi</option>
+                                            <select class="ms-2 text-end" name="cars"
+                                                aria-label="Change maximum vehicle year">
+                                                <option value="1992">1992</option>
+                                                <option value="1993">1993</option>
+                                                <option value="1994">1994</option>
+                                                <option value="1995">1995</option>
+                                                <option value="1996">1996</option>
+                                                <option value="1997">1997</option>
+                                                <option value="1998">1998</option>
+                                                <option value="1999">1999</option>
+                                                <option value="2000">2000</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                            </select> to <select class="me-2 text-end" name="cars"
+                                                aria-label="Change minimum vehicle year">
+                                                <option value="1992">1992</option>
+                                                <option value="1993">1993</option>
+                                                <option value="1994">1994</option>
+                                                <option value="1995">1995</option>
+                                                <option value="1996">1996</option>
+                                                <option value="1997">1997</option>
+                                                <option value="1998">1998</option>
+                                                <option value="1999">1999</option>
+                                                <option value="2000">2000</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
                                             </select>
                                         </div>
                                     </div>
