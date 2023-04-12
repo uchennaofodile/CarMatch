@@ -166,57 +166,61 @@
                         <aside class="col m-3">
                             User choices
                             <form action="/action_page.php" class="border rounded">
-                                <div class="d-flex justify-content-between mx-3 mt-3 mb-2">
-                                    <label for="cars">Make</label>
-                                    <select name="cars" id="cars">
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="opel">Opel</option>
-                                        <option value="audi">Audi</option>
-                                    </select>
-                                </div>
+                                <div class="mx-3 mb-2 mt-3">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <label for="cars">Make</label>
+                                        <select name="cars">
+                                            <option value="volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="opel">Opel</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
 
-                                <div class="d-flex justify-content-between mx-3 mb-2">
-                                    <label for="cars">Model</label>
-                                    <select name="cars" id="cars">
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="opel">Opel</option>
-                                        <option value="audi">Audi</option>
-                                    </select>
-                                </div>
+                                    <div class="d-flex justify-content-between  mb-3">
+                                        <label for="cars">Model</label>
+                                        <select name="cars">
+                                            <option value="volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="opel">Opel</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
 
-                                <div class="d-flex justify-content-between mx-3 mb-2">
-                                    <label for="cars">Body Style</label>
-                                    <select name="cars" id="cars">
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="opel">Opel</option>
-                                        <option value="audi">Audi</option>
-                                    </select>
-                                </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <label for="cars">Body Style</label>
+                                        <select name="cars">
+                                            <option value="volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="opel">Opel</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
 
-                                <div class="d-flex justify-content-between mx-3 mb-2">
-                                    <label for="cars">Year</label>
-                                    <select name="cars" id="cars">
-                                        <option value="volvo">Min</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="opel">Opel</option>
-                                        <option value="audi">Audi</option>
-                                    </select> to <select name="cars" id="cars">
-                                        <option value="volvo">Max</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="opel">Opel</option>
-                                        <option value="audi">Audi</option>
-                                    </select>
-                                </div>
-                                <hr class="my-4">
+                                    <div class="d-flex justify-content-between">
+                                        <label for="cars">Year</label>
+                                        <div class="d-flex flex-row-reverse">
+                                            <select class="ms-2" name="cars">
+                                                <option value="volvo">Max</option>
+                                                <option value="saab">Saab</option>
+                                                <option value="opel">Opel</option>
+                                                <option value="audi">Audi</option>
+                                            </select> to <select class="me-2" name="cars">
+                                                <option value="volvo">Min</option>
+                                                <option value="saab">Saab</option>
+                                                <option value="opel">Opel</option>
+                                                <option value="audi">Audi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr class="my-4">
 
-                                <div>
-                                    <h6>Price</h6>
-                                </div>
+                                    <div>
+                                        <h6>Price</h6>
+                                    </div>
 
-                                <input class=mb-3 type="submit" value="Submit">
+                                    <input class=mb-3 type="submit" value="Submit">
+                                </div>
                             </form>
                         </aside>
                         <section class="col-8">
