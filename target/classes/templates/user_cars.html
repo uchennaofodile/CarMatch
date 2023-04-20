@@ -82,6 +82,15 @@
                 color: #343434;
                 /* or any other color you prefer */
             }
+
+            .custom-select {
+                color: black;
+                background-color: white;
+            }
+
+            .custom-select option:checked {
+                background-color: #b11818;
+            }
         </style>
     </head>
 
@@ -169,7 +178,7 @@
                                 <div class="mx-3 mb-2 mt-3">
                                     <div class="d-flex justify-content-between mb-3">
                                         <label for="cars">Make</label>
-                                        <select name="cars" class="text-end">
+                                        <select name="cars" class="text-end custom-select border-0">
                                             <!-- <option disabled selected value>Select a car
                                                 make</option> -->
                                             <option value="">All</option>
@@ -221,7 +230,7 @@
 
                                     <div class="d-flex justify-content-between  mb-3">
                                         <label for="cars">Model</label>
-                                        <select name="cars" class="text-end">
+                                        <select name="cars" class="text-end custom-select border-0">
                                             <option value="volvo">Volvo</option>
                                             <option value="saab">Saab</option>
                                             <option value="opel">Opel</option>
@@ -231,7 +240,7 @@
 
                                     <div class="d-flex justify-content-between mb-3">
                                         <label for="cars">Body Style</label>
-                                        <select name="cars" class="text-end">
+                                        <select name="cars" class="text-end custom-select border-0">
                                             <option value="volvo">Volvo</option>
                                             <option value="saab">Saab</option>
                                             <option value="opel">Opel</option>
@@ -241,10 +250,10 @@
 
                                     <div class="d-flex justify-content-between">
                                         <label for="cars">Year</label>
-                                        <div class="d-flex flex-row-reverse">
-                                            <select class="ms-2 text-end" name="cars"
-                                                aria-label="Change maximum vehicle year">
-                                                <option disabled selected value>Max</option>
+                                        <div>
+                                            <select class="me-2 text-end custom-select border-0" name="cars"
+                                                aria-label="Change minimum vehicle year">
+                                                <option disabled selected value>Min</option>
                                                 <option value="1992">1992</option>
                                                 <option value="1993">1993</option>
                                                 <option value="1994">1994</option>
@@ -278,9 +287,9 @@
                                                 <option value="2022">2022</option>
                                                 <option value="2023">2023</option>
                                                 <option value="2024">2024</option>
-                                            </select> to <select class="me-2 text-end" name="cars"
-                                                aria-label="Change minimum vehicle year">
-                                                <option disabled selected value>Min</option>
+                                            </select> to <select class="ms-2 text-end custom-select border-0"
+                                                name="cars" aria-label="Change maximum vehicle year">
+                                                <option disabled selected value>Max</option>
                                                 <option value="1992">1992</option>
                                                 <option value="1993">1993</option>
                                                 <option value="1994">1994</option>
@@ -321,9 +330,18 @@
 
                                     <div>
                                         <h6>Price</h6>
-                                    </div>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <input type="email" class="form-control ms-2 border"
+                                                aria-describedby="minimum price" placeholder="$0">
 
-                                    <input class=mb-3 type="submit" value="Submit">
+                                            <span class="mx-2 text-muted">to</span>
+                                            <input type="email" class="form-control me-2 border"
+                                                aria-describedby="maximum price" placeholder="$100,000+">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="d-flex justify-content-end"><input class=mb-3 type="submit"
+                                            value="Submit"></div>
                                 </div>
                             </form>
                         </aside>
